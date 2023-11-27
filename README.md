@@ -1,36 +1,37 @@
-# UniversityCourseRegistration
+## UniversityCourseRegistration
 Application for university registration system.
 
-### Prerequisites
+## Prerequisites
 - Java Development Kit (JDK)
 - Maven
 - PostgreSQL Database
 
 ## Setup
 
-Open the project in your IDE for example IntelliJ 
-in the terminal navigate to the path of your project 
-run the following command : 
-mvn clean install
-mvn spring-boot:run
+Clone the project <br>
+Open the project in your IDE for example IntelliJ <br>
+in the terminal navigate to the path of your project <br>
+run the following command : <br>
+mvn clean install <br>
+mvn spring-boot:run <br>
 
 
 ## POSTMAN LINK :
 
 https://api.postman.com/collections/30260614-8ad0a151-0cde-4652-adc4-d2e7a5a81030?access_key=PMAT-01HG8TNHDKH2CKF93BX7RKW0AD
 
-### Steps
+## Steps
 
 The API should now be accessible at http://localhost:8655/api.
 
-
 ## API ENDPOINTS :-
 
-## Add Student 
+### Add Student 
 
-POST ADD STUDENT
-Endpoint: http://localhost:9855/api/add-student
-Request:
+POST ADD STUDENT <br>
+Endpoint: http://localhost:9855/api/add-student <br>
+Request: <br>
+```
 {
   "studentId": 1,
   "firstName": "John",
@@ -39,8 +40,9 @@ Request:
   "emailId": "john.doe@example.com",
   "addedDate": "2023-11-27"
 }
-
-Response:
+``` 
+Response: <br>
+```
 {
     "status": "200 OK",
     "code": 0,
@@ -54,12 +56,13 @@ Response:
         "addedDate": "2023-11-27"
     }
 }
+```
+### Get Student
 
-## Get Student
-
-GET Fetching student with ID
-Endpoint: http://localhost:8655/api/student/2
-Response:
+GET Fetching student with ID <br>
+Endpoint: http://localhost:8655/api/student/2 <br>
+Response: <br>
+```
 {
     "status": "200 OK",
     "code": 0,
@@ -73,16 +76,20 @@ Response:
         "addedDate": "2023-11-27"
     }
 }
+```
 
-## Add Course
+### Add Course 
 
-POST ADD COURSE
-Endpoint: http://localhost:8655/api/add-course
-Request:
+POST ADD COURSE <br>
+Endpoint: http://localhost:8655/api/add-course <br>
+Request: <br>
+```
 {
   "courseName": "Computer Science"
 }
-Response:
+```
+Response:<br>
+```
 {
     "status": "200 OK",
     "code": 0,
@@ -93,12 +100,13 @@ Response:
         "enrollment": null
     }
 }
+```
+### Get All Courses
 
-## Get All Courses
-
-GET All Courses Fetched
-Endpoint: http://localhost:8655/api/courses/all
-Response:
+GET All Courses Fetched <br>
+Endpoint: http://localhost:8655/api/courses/all <br>
+Response: <br>
+```
 {
     "status": "200 OK",
     "code": 0,
@@ -112,18 +120,22 @@ Response:
         }
     ]
 }
+```
 
-## Add Enrollment
+### Add Enrollment
 
-POST Adding new Enrollment
-Endpoint: http://localhost:8655/api/add-enrollment
-Request:
+POST Adding new Enrollment <br>
+Endpoint: http://localhost:8655/api/add-enrollment <br>
+Request: <br>
+```
 {
   "studentId": 1,
   "courseId": 1,
   "enrollDate": "2023-01-01"
 }
-Response:
+```
+Response: <br>
+```
 {
   "status": "OK",
   "message": "Enrolled",
@@ -144,12 +156,13 @@ Response:
     "enrollDate": "2023-01-01"
   }
 }
+```
+### Get All Enrollments
 
-## Get All Enrollments
-
-GET Fetching all list
-Endpoint: http://localhost:8655/api/enrollment/all
-Response:
+GET Fetching all list <br>
+Endpoint: http://localhost:8655/api/enrollment/all <br>
+Response: <br>
+```
 {
   "status": "OK",
   "message": "Enrolled student list",
@@ -171,16 +184,19 @@ Response:
     },
   ]
 }
+```
+### Update Enrollment
 
-## Update Enrollment
-
-PUT Updation of Enrollment
-Endpoint: http://localhost:8655/api/update-enrollment/1
-Request:
+PUT Updation of Enrollment <br>
+Endpoint: http://localhost:8655/api/update-enrollment/1 <br>
+Request: <br>
+```
 {
   "enrollDate": "2023-02-01"
 }
-Response:
+```
+Response: <br>
+```
 {
   "status": "OK",
   "data": {
@@ -200,17 +216,19 @@ Response:
     "enrollDate": "2023-02-01"
   }
 }
+```
+### Delete Enrollment
 
-## Delete Enrollment
-
-DEL Delete
-Endpoint: http://localhost:8655/api/delete-enrollment/1
-Response: 
+DEL Delete <br>
+Endpoint: http://localhost:8655/api/delete-enrollment/1 <br>
+Response: <br>
+```
 {
     "status": "200 OK",
     "code": 0,
     "message": "Deleted Successfully",
     "data": "Enrollment with ID 5 deleted successfully"
 }
+```
 
 
